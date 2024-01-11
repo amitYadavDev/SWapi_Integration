@@ -1,4 +1,4 @@
-package amitapps.media.apipractice
+package amitapps.media.apipractice.data.remote.model
 
 import amitapps.media.apipractice.data.remote.model.PeopleData
 import retrofit2.Call
@@ -9,5 +9,5 @@ import retrofit2.http.Query
 
 interface ApiInterface {
     @GET("people/")
-    fun getCharactors() : Call<PeopleData>
+    fun getCharactors(@Query("page") page: Int) : PeopleData
 }
